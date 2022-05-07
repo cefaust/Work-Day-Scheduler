@@ -9,14 +9,14 @@ function runEverySecond(time) {
   $("#currentDay").text(time);
   for (let i = 0; i < textareaEls.length; i++) {
     const textarea = $(textareaEls[i]);
-    const rowHour = i + 8;
+    const rowHour = i + 9;
     if (currentHour < rowHour) {
       // if in future
       textarea.css("background-color", "green");
     } else if (currentHour > rowHour) {
       // if in past
       textarea.css("background-color", "grey");
-    } else if (currentHour === rowHour) {
+    } else {     //else if (currentHour === rowHour) 
       // current hour
       textarea.css("background-color", "red");
     }
