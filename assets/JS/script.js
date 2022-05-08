@@ -7,6 +7,7 @@ function runEverySecond(time) {
   var time = moment(unix, "X").format("MMM DD, YYYY [at] h:mm:ss ");
   const currentHour = moment(unix, "X").format("H");
   $("#currentDay").text(time);
+
   for (let i = 0; i < textareaEls.length; i++) {
     const textarea = $(textareaEls[i]);
     const rowHour = i + 9;
@@ -16,7 +17,7 @@ function runEverySecond(time) {
     } else if (currentHour > rowHour) {
       // if in past
       textarea.css("background-color", "grey");
-    } else {     //else if (currentHour === rowHour) 
+    } else if {      
       // current hour
       textarea.css("background-color", "red");
     }
@@ -31,6 +32,7 @@ saveBtnEl.click(function (event) {
   let val = textarea.val();
 
   localStorage.setItem(id, val);
+  
 });
 
 for (let i = 0; i < textareaEls.length; i++) {
