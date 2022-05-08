@@ -80,4 +80,8 @@ textarea {
   cursor: pointer;
 }
 
-media
+/* @media screen and (max-width: 576px) {
+  .row {
+    margin-bottom: 50px;
+  }
+} */

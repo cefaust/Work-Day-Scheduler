@@ -17,7 +17,7 @@ function runEverySecond(time) {
     } else if (currentHour > rowHour) {
       // if in past
       textarea.css("background-color", "grey");
-    } else if {      
+    } else {      
       // current hour
       textarea.css("background-color", "red");
     }
